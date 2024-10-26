@@ -1,8 +1,6 @@
 # i-love-web
 
-Learning Journal en Digital Gardening
-
-De instructie voor de I Love Web vind je in: [INSTRUCTIONS](https://github.com/fdnd-task/i-love-web/blob/main/docs/INSTRUCTIONS.md)
+Eventually the Md files hosted here will be accessible through my portfolio website, but currently they can only be accessed through this repository.
 
 
 ## Licentie
