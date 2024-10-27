@@ -1,0 +1,12 @@
+Geleerd over:
+- Initialisatie SvelteKit project
+- Werken met Svelte stores
+	- Hoe kun je het beste met stores werken om state te delen tussen components?
+	- Hoe zorg ik ervoor dat mijn store consistent en performant werkt?
+- Werken met components en props in Svelte
+- Geleerd wat een epic inhoudt en hoe dit onderverdeeld kan worden in stories, die onderverdeeld kunnen worden in taken
+	- User stories beginnen met "Als bezoeker" en leggen een activiteit uit die zij kunnen uitvoeren, bijvoorbeeld: "Als bezoeker, wil ik producten in mijn winkelmandje kunnen doen om overzicht te houden wat ik aanschaf"
+	- User stories hebben vaak meer taken dan je denkt, het is belangrijk om de tijd te nemen deze goed in taken te verdelen om zo overzicht te behouden op wat er gedaan moet worden en hoe lang dit waarschijnlijk gaat duren.
+- Refresher over project wrap-up
+- SvelteKit essentials en conventions doorgenomen
+	- Geleerd hoe binding tussen components en elementen werkt
