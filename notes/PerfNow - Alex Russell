@@ -1,0 +1,25 @@
+# Reckoning: Frontend's Lost Decade
+
+## Platforms are competitions
+You're winning or you're losing, and the web today is losing. 75% of the devices that run browsers are smartphones, and on smartphones people don't use the web as often as they do on desktop to fulfill tasks.
+
+Most tasks on mobile phones are done on apps rather than browsers, which are often a lot worse in terms of transparency and privacy, as they are often proprietary ecosystems.
+
+
+## Reasons why browsers are losing on mobile
+### In-App browsers
+
+Often break capabilities and destroy value of both users and businesses on the web because of things like unsynchronised cookie state all to get more value for the app creator.
+
+### Search shenanigans
+
+Things like "AI" "summaries" pushing links further down the page
+
+### Apple's anti PWA agenda
+
+### Missing APIs on mobile
+- Apple slow-rolling everything
+    - e.g., scroll-linked view transitions
+
+### Slow CPU & network progress
+

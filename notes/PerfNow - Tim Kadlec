@@ -1,0 +1,35 @@
+# In the Blink of an Eye
+
+Expectations aren't constant - as technology improves, our expectations of its capabilities increase.
+
+### 1. Jevon's Paradox
+
+> The more we have of a resource, the more we consume it
+
+When technology increases and we start expecting more of it, not everyone gets to benefit. There will always be people who have lower end devices who do not get to adhere to these increased expectations.
+
+### 2. Hedonistic treadmill
+
+> As resources become more powerful, our expectations increase, diminishing our satisfaction.
+
+For example, people who grew up with earlier versions of the internet tend to have lower expectations in terms of how snappy and instantaneous interaction feedback should have to be, compared to someone who grew up with more modern versions of the internet. This earlier generation has learned patience on the web, but for the younger generation, their experiences are almost always instantaneous.
+
+Expectations are not constant, they are learned through experience.
+
+
+## Bridging the gap between the two
+The web is not quite fast enough for the lower end users' devices, but also not quite fast enough for the expectations of users with high-end devices
+
+However, it is likely this will change in the near future
+
+### Core Web Vitals
+
+Core Web Vitals are a better starting point than a finish line
+
+### Return to the browser
+
+The browser is becoming more and more capable. We've had a flurry of small changes and features on the web which have been improving performance. Things like lazy loading, speculation rules, view transitions, fetch priority, etc.
+
+Betting on the browser is our best chance at long-term success.
+
+> Good performance requires a ruthless obsession for the user experience

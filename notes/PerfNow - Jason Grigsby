@@ -1,0 +1,48 @@
+# Third Party Woes
+> slides: bit.ly/thirdpartywoes
+
+Images have always been difficult, but they are usually easy to troubleshoot and improve.
+
+Third-party scripts are JavaScript provided by third party sites and services.
+- Businesses rely on third-party scripts for critical functionality.
+
+The web performance community tends to hate third-party scripts, as even if you make a very fast website, these scripts can single handedly slow down your site significantly.
+
+Around 94% of mobile websites have at least one third-party resource. The median on mobile is about 45 scripts.
+
+## How to analyse third-party script performance
+
+> Third-party audit
+
+1. Which third-parties are being used?
+   - use RequestMap generator to get insight. (requestmap.herokuapp.com)<br>
+  (bit.ly/3rdpartyaudit)
+
+2. Which third-party scripts are causing the biggest problems?
+
+## What can you do with this information
+
+All you can really do is have a conversation. They center around a series of questions:
+- Is this script necessary?
+- Is it duplicate of another script?
+- Is it needed on every page?
+- Can the script provider improve performance?
+- Can we self-host it?
+- Can we execute the script on the server/edge?
+- Can we execute it async/deferred?
+- Can we use a facade to only load when necessary?
+   - For example how lite-youtube-embed does it
+
+## Some newer options?
+
+### Partytown
+- Lets third-party scripts run in a webworker, so they do not compete with other things which are more important for user interaction on the main thread. Works great, but finnicky and difficult to maintain.
+- More of an experiment, but not really something that is used often nor maintained very well. Can work well, but if it doesn't work right out of the box and you run into a roadblock, you probably won't be able to use it.
+
+### Zaraz
+- Moves third-party scripts to run in edge-workers at the end of CDNs. provides performance benefits and increases privacy, also reduces impact of content blockers because it means it all is first-party.
+- Doesn't support a great deal of scripts yet, mostly ones focused at analytics.
+- Very new, still not very robust or feature-rich.
+
+### Yottaa
+- Attempts to make scripts faster by reordering the sequencing of JavaScript and changing the way it is loaded.
