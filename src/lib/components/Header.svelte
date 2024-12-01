@@ -15,13 +15,13 @@
   d m m d d
   -->
   <Tile class="desktop"/>
-  <Tile class="mobile" />
-  <Tile class="mobile" />
+  <Tile class="mobile" position="topright" />
+  <Tile class="mobile" position="topleft "/>
   <Tile class="desktop"/>
   <Tile class="desktop"/>
 
   <Tile class="desktop"/>
-  <Tile class="mobile" />
+  <Tile class="mobile" position="bottomright "/>
   <Tile class="mobile" />
   <Tile class="desktop"/>
   <Tile class="desktop"/>

@@ -1,15 +1,33 @@
 <script>
-  let { class: classList = "", } = $props();
+  let { class: classList = "", position = "topleft" } = $props();
 </script>
 
-<div class={classList}>
-
-</div>
+<div class={`${classList} ${position}`}></div>
 
 <style>
+  .topleft {
+    --gradient-position: at 0% 0%;
+  }
+
+  .topright {
+    --gradient-position: at 100% 0%;
+  }
+
+  .bottomleft {
+    --gradient-position: at 0% 100%;
+  }
+
+  .bottomright {
+    --gradient-position: at 100% 100%;
+  }
+
   div {
-    background: rgb(35,9,175);
-    background: linear-gradient(37deg, rgba(35,9,175,1) 0%, rgba(68,29,253,1) 50%, rgba(32,9,175,1) 100%);
+    background: rgb(35, 9, 175);
+    background: radial-gradient(
+      var(--gradient-position),
+      red 70.65%,
+      #00000000 50%
+    );
     width: 50vw;
     height: 50vw;
   }
