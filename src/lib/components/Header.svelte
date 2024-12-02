@@ -1,35 +1,37 @@
 <script>
   import Fluff from "./Fluff.svelte";
-  import Tile from "./Tile.svelte";
+  import TileArch from "./TileArch.svelte";
+  import TileHorizontal from "./TileHorizontal.svelte";
 </script>
 
 <div>
 <Fluff> 
-  <Tile class="tablet" />
-  <Tile class="tablet" />
+  <TileArch class="tablet" />
+  <TileArch class="tablet" />
 </Fluff>
 
 <header>
+
   <!-- 
   d m m d d
   d m m d d
   -->
-  <Tile class="desktop"/>
-  <Tile class="mobile" position="topright" />
-  <Tile class="mobile" position="topleft "/>
-  <Tile class="desktop"/>
-  <Tile class="desktop"/>
+  <TileArch class="desktop" colorBg="red" />
+  <TileArch class="mobile" position="bottomright" colorBg="orange" colorLarge="black" colorSmall="red" />
+  <TileArch class="mobile" position="topright" colorBg="red" colorLarge="black" colorSmall="black "/>
+  <TileArch class="desktop" colorBg="red"/>
+  <TileArch class="desktop" colorBg="red" />
 
-  <Tile class="desktop"/>
-  <Tile class="mobile" position="bottomright "/>
-  <Tile class="mobile" />
-  <Tile class="desktop"/>
-  <Tile class="desktop"/>
+  <TileArch class="desktop" colorBg="red" />
+  <TileArch class="mobile" position="topright" colorBg="lightblue" colorLarge="black" colorSmall="white" />
+  <TileHorizontal class="mobile" colorTop="white" colorBottom="black" />
+  <TileArch class="desktop" colorBg="red" />
+  <TileArch class="desktop" colorBg="red" />
 </header>
 
 <Fluff> 
-  <Tile class="tablet" />
-  <Tile class="tablet" />
+  <TileArch class="tablet" />
+  <TileArch class="tablet" />
 </Fluff>
 </div>
 

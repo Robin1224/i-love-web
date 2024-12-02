@@ -1,8 +1,8 @@
 <script>
-  let { class: classList = "", position = "topleft" } = $props();
+  let { class: classList = "", position = "topleft", colorBg = "white", colorLarge = "white", colorSmall = "white" } = $props();
 </script>
 
-<div class={`${classList} ${position}`}></div>
+<div class={`${classList} ${position}`} style={`--colorBg: var(--${colorBg}); --colorLarge: var(--${colorLarge}); --colorSmall: var(--${colorSmall})`}></div>
 
 <style>
   .topleft {
@@ -22,11 +22,13 @@
   }
 
   div {
-    background: rgb(35, 9, 175);
+    background: var(--colorBg);
     background: radial-gradient(
       var(--gradient-position),
-      red 70.65%,
-      #00000000 50%
+      var(--colorSmall) 35.325%,
+      var(--colorLarge) 35.625%,
+      var(--colorLarge) 70.65%,
+      var(--colorBg) 70.85%
     );
     width: 50vw;
     height: 50vw;
