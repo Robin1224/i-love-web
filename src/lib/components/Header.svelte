@@ -8,6 +8,7 @@
 <Fluff> 
   <TileArch class="tablet" />
   <TileArch class="tablet" />
+  <TileArch class="tablet" />
 </Fluff>
 
 <header>
@@ -16,20 +17,31 @@
   d m m d d
   d m m d d
   -->
+
+  <!-- Row 1 -->
   <TileArch class="desktop" colorBg="red" />
-  <TileArch class="mobile" position="bottomright" colorBg="orange" colorLarge="black" colorSmall="red" />
+  <TileArch class="mobile" position="bottomright" colorBg="yellow" colorLarge="black" colorSmall="red" />
   <TileArch class="mobile" position="topright" colorBg="red" colorLarge="black" colorSmall="black "/>
   <TileArch class="desktop" colorBg="red"/>
   <TileArch class="desktop" colorBg="red" />
 
+  <!-- Row 2 -->
   <TileArch class="desktop" colorBg="red" />
-  <TileArch class="mobile" position="topright" colorBg="lightblue" colorLarge="black" colorSmall="white" />
+  <TileArch class="mobile" position="topright" colorBg="blue" colorLarge="black" colorSmall="white" />
   <TileHorizontal class="mobile" colorTop="white" colorBottom="black" />
+  <TileArch class="desktop" colorBg="red" />
+  <TileArch class="desktop" colorBg="red" />
+
+  <!-- Row 3 -->
+  <TileArch class="desktop" colorBg="red" />
+  <TileArch class="mobile" position="topright" colorBg="black" colorLarge="blue" colorSmall="blue" />
+  <TileArch class="mobile" position="bottomright" colorBg="white" colorLarge="black" colorSmall="black" />
   <TileArch class="desktop" colorBg="red" />
   <TileArch class="desktop" colorBg="red" />
 </header>
 
 <Fluff> 
+  <TileArch class="tablet" />
   <TileArch class="tablet" />
   <TileArch class="tablet" />
 </Fluff>
