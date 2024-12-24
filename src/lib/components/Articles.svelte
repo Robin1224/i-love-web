@@ -60,6 +60,7 @@
   div, main {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
 
   @media only screen and (min-width: 430px) {

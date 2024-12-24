@@ -2,6 +2,7 @@
   import Fluff from "./Fluff.svelte";
   import TileArch from "./TileArch.svelte";
   import TileHorizontal from "./TileHorizontal.svelte";
+  import Title from "./Title.svelte";
 </script>
 
 <div>
@@ -17,6 +18,8 @@
   d m m d d
   d m m d d
   -->
+
+  <Title />
 
   <!-- Row 1 -->
   <TileArch class="desktop" colorBg="red" />
