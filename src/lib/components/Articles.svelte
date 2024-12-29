@@ -15,13 +15,13 @@
   <!-- <SectionTitle /> -->
 
   <!-- Row 1 -->
-  <TileArch class="desktop" position="bottomleft" colorBg="red" colorLarge="black" colorSmall="black" />
-  <TileArch class="tablet" position="bottomright" colorBg="black" colorLarge="yellow" colorSmall="yellow" />
-  <TileArch class="mobile" position="topright" colorBg="red" colorLarge="yellow" colorSmall="yellow" />
-  <TileArch class="mobile" position="topright" colorBg="yellow" colorLarge="red" colorSmall="red"/>
-  <TileArch class="tablet" position="topleft" colorBg="black" colorLarge="yellow" colorSmall="yellow" />
-  <TileArch class="desktop" position="topleft" colorBg="black" colorLarge="white" colorSmall="white" />
-  <TileArch class="desktop" colorBg="red" />
+  <TileArch class="desktop" position="topright" colorBg="red" colorLarge="black" />
+  <TileArch class="tablet" position="bottomright" colorBg="red" colorLarge="yellow" />
+  <TileArch class="mobile" position="topright" colorBg="red" colorLarge="yellow" />
+  <TileArch class="mobile" position="topright" colorBg="yellow" colorLarge="red" />
+  <TileArch class="tablet" position="topleft" colorBg="red" colorLarge="yellow" />
+  <TileArch class="desktop" position="bottomleft" colorBg="yellow" colorLarge="red" />
+  <TileArch class="desktop" position="topleft" colorBg="red" colorLarge="black" />
 
   <!-- Row 2 -->
   <TileArch class="desktop" colorBg="red" />
