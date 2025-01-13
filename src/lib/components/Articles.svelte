@@ -1,6 +1,7 @@
 <script>
   import TileArch from "./TileArch.svelte";
   import TileHorizontal from "./TileHorizontal.svelte";
+  import ArticlesTitle from "./ArticlesTitle.svelte";
 </script>
 
 <main>
@@ -12,7 +13,7 @@
   d t m m t d d
   -->
 
-  <!-- <SectionTitle /> -->
+  <ArticlesTitle />
 
   <!-- Row 1 -->
   <TileArch class="desktop" position="topright" colorBg="red" colorLarge="black" />
