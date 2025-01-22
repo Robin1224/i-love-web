@@ -2,7 +2,7 @@
 </script>
 
 <h2>
-  ARTI-CLES
+  ARTI<span>-</span>CLES
 </h2>
 
 <style>
@@ -22,16 +22,25 @@
 
   @media only screen and (min-width: 430px) {
     h2 {
-      font-size: 11vw;
+      font-size: 9vw;
+      width: 25vw;
 
-      top: 3.5vw;
-      left: calc();
+      top: 2vw;
+      left: 26.6vw;
     }
+
+    span {
+      display: none;
+    }
+
   }
 
   @media only screen and (min-width: 992px) {
     h2 {
-      font-size: 7vw;
+      font-size: 11vw;
+
+      top: 1.5vw;
+      left: 25vw;
     }
   }
 </style>
