@@ -39,21 +39,7 @@
       var(--colorLarge) 70.65%,
       var(--colorBg) 70.85%
     );
-    width: 50vw;
-    height: 50vw;
-  }
-
-  @media only screen and (min-width: 430px) {
-    div {
-      width: 25vw;
-      height: 25vw;
-    }
-  }
-
-  @media only screen and (min-width: 992px) {
-    div {
-      width: 14.2857vw;
-      height: 14.2857vw;
-    }
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
 </style>

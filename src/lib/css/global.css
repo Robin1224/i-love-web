@@ -15,20 +15,41 @@
   --red: #CA2121;
   --yellow: #FCC72B;
   --blue: #1B64BA;
-
-  @media only screen and (max-width: 430px) {
-    .tablet, .desktop {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 992px) {
-    .desktop {
-      display: none;
-    }
-  }
 }
 
 body {
   background-color: var(--black);
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tablet, .desktop {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+@media only screen and (min-width: 430px) {
+  .tablet {
+    display: block;
+  }
+
+  .tile-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .desktop {
+    display: block;
+  }
+
+  .tile-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }

@@ -1,10 +1,10 @@
 <script>
-  import TileArch from "./TileArch.svelte";
-  import TileHorizontal from "./TileHorizontal.svelte";
-  import Title from "./Title.svelte";
+  import TileArch from "$lib/components/atoms/TileArch.svelte";
+  import TileHorizontal from "$lib/components/atoms/TileHorizontal.svelte";
+  import Title from "$lib/components/atoms/Title.svelte";
 </script>
 
-<header>
+<header class="tile-grid">
 
   <!-- 
   d t m m t d d
@@ -12,7 +12,7 @@
   d t m m t d d
   -->
 
-  <Title />
+  <!-- <Title /> -->
 
   <!-- Row 1 -->
   <TileArch class="desktop" position="bottomleft" colorBg="red" colorLarge="black" />
@@ -27,7 +27,10 @@
   <TileArch class="desktop" position="topright" colorBg="blue" colorLarge="black" />
   <TileArch class="tablet" position="topright" colorBg="black" colorLarge="white" colorSmall="white" />
   <TileArch class="mobile" position="topright" colorBg="blue" colorLarge="black" colorSmall="white" />
-  <TileHorizontal class="mobile" colorTop="white" colorBottom="black" />
+  <div class="relative">
+    <TileHorizontal class="mobile" colorTop="white" colorBottom="black" />
+    <Title />
+  </div>
   <TileArch class="tablet" position="bottomleft" colorBg="blue" colorLarge="white" colorSmall="black" />
   <TileArch class="desktop" position="bottomright" colorBg="black" colorLarge="red" />
   <TileArch class="desktop" position="bottomleft" colorBg="blue" colorLarge="black" />
@@ -41,17 +44,3 @@
   <TileArch class="desktop" position="bottomright" colorBg="red" colorLarge="white" />
   <TileArch class="desktop" position="topleft" colorBg="black" colorLarge="white" />
 </header>
-
-<style>
-  header {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  @media only screen and (min-width: 430px) {
-  }
-
-  @media only screen and (min-width: 992px) {
-  }
-
-</style>

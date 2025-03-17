@@ -13,35 +13,45 @@
     font-family: Cooper Hewitt;
     font-weight: bold;
     font-size: 20vw;
+    line-height: 1.4;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+
+    align-items: center;
 
     position: absolute;
+    top: 2vw;
+    left: 1vw;
+  }
+
+  span {
+    margin-bottom: -3vw;
   }
 
   /* I */
   span.title-1 {
-    position: absolute;
-    top: 52.5vw;
-    left: 53vw;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 
     color: var(--black);
   }
 
   /* Heart */
   h1 :global(svg) {
-    position: absolute;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
 
-    top: 54.5vw;
-    left: 63vw;
-
-    height: 16vw;
+    height: 15vw;
+    transform: translateY(-1.5vw) translateX(2vw);
     width: auto;
   }
 
   /* Web */
   span.title-2 {
-    position: absolute;
-    top: 77.5vw;
-    left: 53vw;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
 
     color: var(--white);
   }
@@ -49,26 +59,15 @@
   @media only screen and (min-width: 430px) {
     h1 {
       font-size: 11vw;
-    }
-
-    /* I */
-    span.title-1 {
-      top: 25.75vw;
-      left: 51.5vw;
+      line-height: 1.4;
+      top: 0;
+      left: 0;
     }
 
     /* Heart */
     h1 :global(svg) {
-      top: 27vw;
-      left: 56.5vw;
-
       height: 8.5vw;
-    }
-
-    /* Web */
-    span.title-2 {
-      top: 38vw;
-      left: 51.5vw;
+      transform: translateY(0) translateX(2vw);
     }
   }
 
@@ -77,24 +76,10 @@
       font-size: 7vw;
     }
 
-    /* I */
-    span.title-1 {
-      top: 14.35vw;
-      left: 42.5vw;
-    }
-
     /* Heart */
     h1 :global(svg) {
-      top: 15.2vw;
-      left: 45.5vw;
-
-      height: 5.4vw;
-    }
-
-    /* Web */
-    span.title-2 {
-      top: 21.45vw;
-      left: 42.5vw;
+      height: 5.3vw;
+      transform: translateY(0.3vw) translateX(1vw);
     }
   }
 </style>
