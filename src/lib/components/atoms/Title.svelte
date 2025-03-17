@@ -24,6 +24,8 @@
     position: absolute;
     top: 2vw;
     left: 1vw;
+
+    z-index: 1;
   }
 
   span {
