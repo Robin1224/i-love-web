@@ -1,0 +1,65 @@
+<script>
+  const {
+    text = "Robin van der Heijden",
+    color = "black",
+    href = null,
+  } = $props();
+  const characters = text.split("");
+</script>
+
+{#snippet letters(char)}
+  <span
+    style="transform: rotate({Math.random() * 10 - 5}deg) scale({Math.random() *
+      0.15 +
+      1}) translate({Math.random() * 2}px, {Math.random() *
+      2}px); filter: blur({Math.random() * 0.5}rem);"
+    >{#if char === " "}
+      {@html "&nbsp;"}
+    {:else}
+      {char}
+    {/if}
+  </span>
+{/snippet}
+
+{#if href}
+  <a {href} style="color: {color}">
+    {#each characters as char}
+      {@render letters(char)}
+    {/each}
+    &nbsp; &nbsp;
+  </a>
+{:else}
+  <p style="color: {color}">
+    {#each characters as char}
+      {@render letters(char)}
+    {/each}
+    &nbsp; &nbsp;
+  </p>
+{/if}
+
+<style>
+  p,
+  a {
+    display: inline;
+    font-family: "Courier New", Courier, monospace;
+    word-break: break-all;
+    /* line-height: 0.9; */
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  p > span,
+  a > span {
+    /* margin-right: -1.9rem; */
+    width: fit-content;
+    display: inline-block;
+    font-size: 4rem;
+    transition: filter 0.5s ease-in-out;
+  }
+
+  p:hover > span,
+  a:hover > span {
+    filter: blur(0rem) !important;
+  }
+</style>
