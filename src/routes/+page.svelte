@@ -13,21 +13,21 @@
   });
 </script>
 
-<div bind:this={container} class={animating ? 'animation' : ''}>
+<div bind:this={container}>
   {#each Array(6) as _}
-    <InkText />
+    <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} />
   {/each}
 
-  <InkText text="Frontend Developer" color="rgb(0, 255, 40)" />
+  <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} text="Frontend Developer" color="rgb(0, 255, 40)" />
 
   {#each Array(6) as _}
-    <InkText />
+    <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} />
   {/each}
 
-  <InkText href="/projects" text="Projects" color="rgb(255, 102, 0)" />
+  <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} href="/projects" text="Projects" color="rgb(255, 102, 0)" />
   
   {#each Array(21) as _}
-    <InkText />
+    <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} />
   {/each}
 </div>
 
@@ -40,20 +40,4 @@
     height: 100vh;
     overflow: hidden;
   }
-
-  .animation {
-    animation: fade-out 3s ease-in-out;
-  }
-
-@keyframes fade-out {
-  0% {
-    filter: contrast(50);
-  }
-  20% {
-    filter: contrast(10);
-  }
-  100% {
-    filter: contrast(0);
-  }
-}
 </style>

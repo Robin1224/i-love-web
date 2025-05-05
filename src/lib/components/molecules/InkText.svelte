@@ -3,16 +3,21 @@
     text = "Robin van der Heijden",
     color = "black",
     href = null,
+    onanimationend = () => {},
+    class: className = ""
   } = $props();
   const characters = text.split("");
 </script>
 
 {#snippet letters(char)}
   <span
-    style="transform: rotate({Math.random() * 10 - 5}deg) scale({Math.random() *
-      0.15 +
-      1}) translate({Math.random() * 2}px, {Math.random() *
-      2}px); filter: blur({Math.random() * 0.5}rem);"
+    onanimationend={onanimationend}
+    class={className}
+    style="transform: 
+    rotate({Math.random() * 10 - 5}deg) 
+    scale({Math.random() * 0.15 + 1}) 
+    translate({Math.random() * 2}px, {Math.random() * 2}px); 
+    filter: blur({Math.random() * 0.5}rem);"
     >{#if char === " "}
       {@html "&nbsp;"}
     {:else}
@@ -61,5 +66,21 @@
   p:hover > span,
   a:hover > span {
     filter: blur(0rem) !important;
+  }
+
+  .animation {
+    animation: fade-out 3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 </style>
