@@ -17,7 +17,7 @@
     rotate({Math.random() * 10 - 5}deg) 
     scale({Math.random() * 0.15 + 1}) 
     translate({Math.random() * 2}px, {Math.random() * 2}px); 
-    filter: blur({Math.random() * 0.5}rem);"
+    filter: blur({Math.random() * 0.3 + 0.2}rem);"
     >{#if char === " "}
       {@html "&nbsp;"}
     {:else}
@@ -46,12 +46,13 @@
   p,
   a {
     display: inline;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Delegate TM", Courier, monospace;
     word-break: break-all;
     /* line-height: 0.9; */
     font-weight: bold;
     font-size: 1rem;
     text-decoration: none;
+    animation: fade-in 3s cubic-bezier(0.76, 0, 0.24, 1);
   }
 
   p > span,
@@ -76,11 +77,17 @@
     0% {
       opacity: 1;
     }
-    20% {
+    100% {
       opacity: 0.5;
     }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0.4;
+    }
     100% {
-      opacity: 0;
+      opacity: 1;
     }
   }
 </style>

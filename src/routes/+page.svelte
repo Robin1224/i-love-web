@@ -18,7 +18,7 @@
     <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} />
   {/each}
 
-  <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} text="Frontend Developer" color="rgb(0, 255, 40)" />
+  <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} text="Frontend Web Developer" color="rgb(0, 255, 40)" />
 
   {#each Array(6) as _}
     <InkText onanimationend={() => animating = false} class={animating ? 'animation' : ''} />
