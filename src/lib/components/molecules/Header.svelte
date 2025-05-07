@@ -25,7 +25,7 @@
 
   <!-- Row 2 -->
   <TileArch class="desktop" position="topright" colorBg="blue" colorLarge="black" />
-  <TileArch class="tablet" position="topright" colorBg="black" colorLarge="white" colorSmall="white" />
+  <TileArch class="tablet" position="topright" colorBg="black" colorLarge="white" />
   <TileArch class="mobile" position="topright" colorBg="blue" colorLarge="black" colorSmall="white" />
   <div class="relative">
     <TileHorizontal class="mobile" colorTop="white" colorBottom="black" />

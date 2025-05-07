@@ -13,10 +13,12 @@
     class={`arch relative ${position}`}
     style={`--color: var(--${colorLarge});`}
   >
-    <div
-      class={`arch absolute ${position}`}
-      style={`--color: var(--${colorSmall});`}
-    ></div>
+    {#if (colorSmall)}
+      <div
+        class={`arch absolute ${position}`}
+        style={`--color: var(--${colorSmall});`}
+      ></div>
+    {/if}
   </div>
 </div>
 
@@ -46,11 +48,21 @@
   }
 
   div.background {
-    background-color: var(--colorBg);
+    transition: --horizontal-position 0.5s cubic-bezier(0.85, 0.09, 0.15, 0.91);
+    --horizontal-position: 0%;
+    background: var(--colorBg);
+    background: linear-gradient(
+      0deg,
+      var(--black) 0%,
+      var(--black) var(--horizontal-position),
+      var(--colorBg) var(--horizontal-position),
+      var(--colorBg) 100%
+    );
   }
 
   div.arch {
-    /* background: var(--colorBg); */
+    transition: --gradient-angle 0.5s cubic-bezier(0.85, 0.09, 0.15, 0.91);
+    background: var(--colorBg);
     background-image: conic-gradient(
       from var(--gradient-angle) at var(--gradient-position),
       var(--color) 0deg,
@@ -91,5 +103,87 @@
     bottom: 0;
   }
   
+
+  div.background:hover {
+    animation: animate-out-horizontal 1s forwards;
+    
+  }
+
+  div.background:hover .arch.topleft {
+    animation: animate-out-tl-br 1s forwards;
+  }
+
+  div.background:hover .arch.topright {
+    animation: animate-out-tr-bl 1s forwards;
+  }
+
+  div.background:hover .arch.bottomleft {
+    animation: animate-out-tr-bl 1s forwards;
+  }
+
+  div.background:hover .arch.bottomright {
+    animation: animate-out-tl-br 1s forwards;
+  }
+
+  @keyframes animate-out-horizontal {
+    0% {
+      --horizontal-position: 0%;
+    }
+    50% {
+      --horizontal-position: 0%;
+    }
+    100% {
+      --horizontal-position: 100%;
+    }
+  }
+
+  @keyframes animate-out-tl-br {
+    0% {
+      opacity: 1;
+      --gradient-angle: 90deg;
+    }
+    50% {
+      opacity: 1;
+      --gradient-angle: 180deg;
+    }
+    51% {
+      opacity: 0;
+      --gradient-angle: 180deg;
+    }
+    100% {
+      opacity: 0;
+      --gradient-angle: 180deg;
+    }
+  }
+
+  @keyframes animate-out-tr-bl {
+    0% {
+      opacity: 1;
+      --gradient-angle: 0deg;
+    }
+    50% {
+      opacity: 1;
+      --gradient-angle: 90deg;
+    }
+    51% {
+      opacity: 0;
+      --gradient-angle: 90deg;
+    }
+    100% {
+      opacity: 0;
+      --gradient-angle: 90deg;
+    }
+  }
   
+  @property --gradient-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+  @property --horizontal-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+  }
 </style>
