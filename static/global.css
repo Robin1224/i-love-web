@@ -1,3 +1,8 @@
+:root {
+  --green-ink: rgb(0, 255, 40);
+  --red-ink: rgb(255, 102, 0);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +12,15 @@
 html, body {
   width: 100%;
   height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Delegate TM', Courier, monospace;
+}
+
+.ink-container {
+  filter: contrast(50);
+  mix-blend-mode: darken;
 }
 
 @font-face {
