@@ -16,7 +16,4 @@
 <PageHeader bind:container={container} onanimationend={() => animating = false} class={animating ? 'animation' : ''}/>
 
 <style>
-  p {
-    color: red;
-  }
 </style>
