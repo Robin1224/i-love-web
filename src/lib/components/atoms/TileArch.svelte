@@ -8,7 +8,7 @@
   } = $props();
 </script>
 
-<div class={`background ${classList}`} style={`--colorBg: var(--${colorBg})`}>
+<div class={`background ${classList}`} style={`--colorBg: var(--${colorBg});`}>
   <div
     class={`arch relative ${position}`}
     style={`--color: var(--${colorLarge});`}
@@ -23,32 +23,43 @@
 </div>
 
 <style>
+  :root {
+    --animation-duration: 2s;
+    --easing-function: cubic-bezier(0.66, 0.1, 0.34, 0.9);
+  }
+
   .topleft {
     --gradient-position: 0% 0%;
     --gradient-angle: 90deg;
     border-radius: 0 0 100% 0;
+    animation: animate-in-tl-br var(--animation-duration) var(--easing-function) forwards;
   }
+
 
   .topright {
     --gradient-position: 100% 0%;
     --gradient-angle: 0deg;
     border-radius: 0 0 0 100%;
+    animation: animate-in-tr-bl var(--animation-duration) var(--easing-function) forwards;
   }
 
   .bottomleft {
     --gradient-position: 0% 100%;
     --gradient-angle: 0deg;
     border-radius: 0 100% 0 0;
+    animation: animate-in-tr-bl var(--animation-duration) var(--easing-function) forwards;
   }
 
   .bottomright {
     --gradient-position: 100% 100%;
     --gradient-angle: 90deg;
     border-radius: 100% 0 0 0;
+    animation: animate-in-tl-br var(--animation-duration) var(--easing-function) forwards;
   }
 
   div.background {
     transition: --horizontal-position 0.5s cubic-bezier(0.85, 0.09, 0.15, 0.91);
+    animation: animate-in-horizontal var(--animation-duration) var(--easing-function) forwards;
     --horizontal-position: 0%;
     background: var(--colorBg);
     background: linear-gradient(
@@ -61,7 +72,7 @@
   }
 
   div.arch {
-    transition: --gradient-angle 0.5s cubic-bezier(0.85, 0.09, 0.15, 0.91);
+    /* transition: --gradient-angle 0.5s cubic-bezier(0.85, 0.09, 0.15, 0.91); */
     background: var(--colorBg);
     background-image: conic-gradient(
       from var(--gradient-angle) at var(--gradient-position),
@@ -82,7 +93,6 @@
   div.absolute {
     width: 50%;
   }
-
   div.absolute.topleft {
     left: 0;
     top: 0;
@@ -102,28 +112,59 @@
     right: 0;
     bottom: 0;
   }
-  
+   /* In */
 
-  div.background:hover {
-    animation: animate-out-horizontal 1s forwards;
-    
+  @keyframes animate-in-horizontal {
+    0% {
+      --horizontal-position: 100%;
+    }
+    50% {
+      --horizontal-position: 0%;
+    }
+    100% {
+      --horizontal-position: 0%;
+    }
   }
 
-  div.background:hover .arch.topleft {
-    animation: animate-out-tl-br 1s forwards;
+  @keyframes animate-in-tl-br {
+    0% {
+      opacity: 0;
+      --gradient-angle: 180deg;
+    }
+    50% {
+      opacity: 0;
+      --gradient-angle: 180deg;
+    }
+    51% {
+      opacity: 1;
+      --gradient-angle: 180deg;
+    }
+    100% {
+      opacity: 1;
+      --gradient-angle: 90deg;
+    }
   }
 
-  div.background:hover .arch.topright {
-    animation: animate-out-tr-bl 1s forwards;
+  @keyframes animate-in-tr-bl {
+    0% {
+      opacity: 0;
+      --gradient-angle: 90deg;
+    }
+    50% {
+      opacity: 0;
+      --gradient-angle: 90deg;
+    }
+    51% {
+      opacity: 1;
+      --gradient-angle: 90deg;
+    }
+    100% {
+      opacity: 1;
+      --gradient-angle: 0deg;
+    }
   }
 
-  div.background:hover .arch.bottomleft {
-    animation: animate-out-tr-bl 1s forwards;
-  }
-
-  div.background:hover .arch.bottomright {
-    animation: animate-out-tl-br 1s forwards;
-  }
+  /* Out */
 
   @keyframes animate-out-horizontal {
     0% {
