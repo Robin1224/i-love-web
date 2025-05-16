@@ -23,6 +23,14 @@ h1, h2, h3, h4, h5, h6, p, a {
   mix-blend-mode: darken;
 }
 
+.js-cont[data-js="no-js"] .no-js {
+  display: block;
+}
+
+.js-cont[data-js="js"] .js {
+  display: block;
+}
+
 @font-face {
   font-family: 'Delegate TM';
   src: url('/fonts/Delegate TM.woff2') format('woff2');
