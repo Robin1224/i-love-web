@@ -6,9 +6,10 @@
     element = "div",
     class: className = "",
     children,
+    ref = $bindable(),
   } = $props();
 
-  let elementRef;
+  let elementRef = $derived(ref);
   let bodyRef;
   let innerWidth;
   let innerHeight;
@@ -24,7 +25,6 @@
     utils.set(elementRef, {
       left: Math.random() * innerWidth - offsetWidth,
       top: Math.random() * innerHeight - offsetHeight,
-      opacity: 1,
     });
 
     createDraggable(elementRef, {
@@ -37,31 +37,31 @@
 <svelte:body bind:this={bodyRef} />
 
   {#if element === "header"}
-    <header bind:this={elementRef} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <header bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
       {@render children()}
     </header>
   {:else if element === "footer"}
-    <footer bind:this={elementRef} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <footer bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
       {@render children()}
     </footer>
   {:else if element === "section"}
-    <section bind:this={elementRef} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <section bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
       {@render children()}
     </section>
   {:else if element === "article"}
-    <article bind:this={elementRef} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <article bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
       {@render children()}
     </article>
   {:else if element === "main"}
-    <main bind:this={elementRef} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <main bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
       {@render children()}
     </main>
   {:else if element === "aside"}
-    <aside bind:this={elementRef} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <aside bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
       {@render children()}
     </aside>
   {:else}
-    <div bind:this={elementRef} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
+    <div bind:this={ref} bind:offsetWidth bind:offsetHeight style="opacity: 0;">
       {@render children()}
     </div>
 {/if}
