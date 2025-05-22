@@ -7,6 +7,8 @@
     class: className = "",
     children,
     ref = $bindable(),
+    x = null,
+    y = null,
   } = $props();
 
   let elementRef = $derived(ref);
@@ -16,16 +18,31 @@
   let offsetWidth;
   let offsetHeight;
 
-  let x = Math.random() * innerWidth - offsetWidth;
-  let y = Math.random() * innerHeight - offsetHeight;
 
   onMount(() => {
     engine.precision = 0;
 
-    utils.set(elementRef, {
-      left: Math.random() * innerWidth - offsetWidth,
-      top: Math.random() * innerHeight - offsetHeight,
-    });
+    if (x && y) {
+      utils.set(elementRef, {
+        left: x,
+        top: y,
+      });
+    } else if (x && y === null) {
+      utils.set(elementRef, {
+        left: x,
+        top: Math.random() * innerHeight - offsetHeight,
+      });
+    } else if (x === null && y) {
+      utils.set(elementRef, {
+        left: Math.random() * innerWidth - offsetWidth,
+        top: y,
+      });
+    } else {
+      utils.set(elementRef, {
+        left: Math.random() * innerWidth - offsetWidth,
+        top: Math.random() * innerHeight - offsetHeight,
+      });
+    }
 
     createDraggable(elementRef, {
       container: bodyRef,
@@ -74,6 +91,7 @@
   div, header, footer, section, article, main, aside {
     position: absolute;
     display: flex;
+    gap: 1rem;
     align-items: var(--align);
     justify-content: var(--align);
     background-color: var(--color);

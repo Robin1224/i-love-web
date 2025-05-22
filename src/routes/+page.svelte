@@ -6,33 +6,34 @@
 
   let headerRef;
   let sectionRef;
-  let articleRef;
-  let footerRef;
-  
+  let projectsRef;
+  let blogRef;
+
+  const animationSpeed = 100;
 
   onMount(() => {
-    let elements = [headerRef, sectionRef, articleRef, footerRef];
+    let elements = [headerRef, sectionRef, projectsRef, blogRef];
 
     utils.set(elements, {
       opacity: 1,
-      delay: stagger(100),
+      delay: stagger(animationSpeed),
     });
   });
 
   onNavigate((navigation) => {
-    let elements = [headerRef, sectionRef, articleRef, footerRef];
-    
+    let elements = [blogRef, projectsRef, sectionRef, headerRef];
+
     return new Promise((resolve) => {
       utils.set(elements, {
         opacity: 0,
-        delay: stagger(100),
+        delay: stagger(animationSpeed),
         onComplete: resolve,
       });
     });
   });
 </script>
 
-<div class="no-js">
+<div class="fallback">
   <h1>robin van der heijden</h1>
   <h2>creative frontend developer</h2>
   <a href="/projects">projects</a>
@@ -62,8 +63,8 @@
 </DraggableBox>
 
 <DraggableBox
-  bind:ref={articleRef}
-  element="article"
+  bind:ref={projectsRef}
+  element="section"
   --color="#ffff00"
   --width={`${Math.random() * 60 + 5}vw`}
   --height={`${Math.random() * 60 + 5}vh`}
@@ -73,8 +74,8 @@
 </DraggableBox>
 
 <DraggableBox
-  bind:ref={footerRef}
-  element="footer"
+  bind:ref={blogRef}
+  element="section"
   --color="#00ff00"
   --width={`${Math.random() * 60 + 5}vw`}
   --height={`${Math.random() * 60 + 5}vh`}
@@ -90,6 +91,16 @@
     font-size: 1rem;
     color: #ffffff;
     mix-blend-mode: difference;
+  }
+
+  .fallback a,
+  .fallback h1,
+  .fallback h2 {
+    color: #000000;
+  }
+
+  .fallback a:hover {
+    color: #7a71eb;
   }
 
   /* :global(body) {
