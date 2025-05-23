@@ -206,6 +206,7 @@
     gap: 1.2rem;
     flex-direction: column;
     opacity: 0;
+    position: relative;
   }
 
   .grid-container {
@@ -237,6 +238,8 @@
   .reset {
     anchor-name: --demo-grid-anchor;
     position: absolute;
+    top: 50%;
+    left: 50%;
     height: 0px;
     width: 0px;
     background-color: transparent;
