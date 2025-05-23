@@ -26,7 +26,7 @@
     </label>
     <div class="highlight"></div>
   </div>
-  <a href="https://codepen.io/robin1224/pen/zxxgGbx">Codepen link</a>
+  <a href="https://codepen.io/robin1224/pen/zxxgGbx" target="_blank" rel="noopener noreferrer">Codepen link</a>
 </div>
 
 <style>

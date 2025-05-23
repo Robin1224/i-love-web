@@ -18,7 +18,7 @@
     <span class="blog">Blog</span>
     <div class="highlight"></div>
   </div>
-  <a href="https://codepen.io/robin1224/pen/zxxgGbx">Nav menu - Codepen link</a>
+  <a href="https://codepen.io/robin1224/pen/azOoGgK" target="_blank" rel="noopener noreferrer">Nav menu - Codepen link</a>
 </div>
 
 <style>

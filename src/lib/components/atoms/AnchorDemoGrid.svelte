@@ -195,7 +195,7 @@
     <div class="grid-item"></div>
     <div class="highlight"></div>
   </div>
-  <a href="https://codepen.io/robin1224/pen/vEOBjXz">Codepen link</a>
+  <a href="https://codepen.io/robin1224/pen/MYwgGxo" target="_blank" rel="noopener noreferrer">CSS-Only mouse tracking experiment - Codepen link</a>
 </div>
 
 <style>

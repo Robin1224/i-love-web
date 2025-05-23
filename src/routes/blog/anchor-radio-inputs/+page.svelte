@@ -12,8 +12,8 @@
   import AnchorDemo5 from "$lib/components/atoms/AnchorDemo5.svelte";
   import AnchorDemoNav from "$lib/components/atoms/AnchorDemoNav.svelte";
   import AnchorDemoList from "$lib/components/atoms/AnchorDemoList.svelte";
-  import AnchorDemoBoard from "$lib/components/atoms/AnchorDemoBoard.svelte";
-  
+  import AnchorDemoGrid from "$lib/components/atoms/AnchorDemoGrid.svelte";
+
   let supported = $state(false);
 
   let windowRef;
@@ -552,7 +552,7 @@ label:nth-of-type(3):has(input:checked) {"{"}
 
 <AnchorDemoList bind:ref={blockRef23} />
 
-<AnchorDemoBoard bind:ref={blockRef24} />
+<AnchorDemoGrid bind:ref={blockRef24} />
 
 <style>
   a,

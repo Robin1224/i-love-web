@@ -30,7 +30,7 @@
     </label>
     <div class="highlight"></div>
   </div>
-  <a href="https://codepen.io/robin1224/pen/vEOBjXz">Codepen link</a>
+  <a href="https://codepen.io/robin1224/pen/vEOBjXz" target="_blank" rel="noopener noreferrer">Radio inputs - Codepen link</a>
 </div>
 
 <style>
