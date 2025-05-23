@@ -250,13 +250,18 @@
     anchor-name: --demo-grid-anchor;
   }
 
+  .grid-container:has(.grid-item:hover) .highlight {
+    width: calc(anchor-size(width) + 0.4rem);
+    height: calc(anchor-size(height) + 0.4rem);
+  }
+
   .highlight {
     position: absolute;
     position-anchor: --demo-grid-anchor;
     left: anchor(left);
     top: anchor(top);
-    width: calc(anchor-size(width) + 0.4rem);
-    height: calc(anchor-size(height) + 0.4rem);
+    width: anchor-size(width);
+    height: anchor-size(height);
     background-color: var(--yellow);
     z-index: -1;
     transition: 0.1s ease-in-out;
