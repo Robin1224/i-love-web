@@ -12,16 +12,16 @@
 >
   <span>What's your favourite color?</span>
   <div class="radio-container">
-    <label for="green1">
-      <input type="radio" name="demo1" id="green1" checked />
+    <label for="green5">
+      <input type="radio" name="demo5" id="green5" checked />
       Green
     </label>
-    <label for="blue1">
-      <input type="radio" name="demo1" id="blue1" />
+    <label for="blue5">
+      <input type="radio" name="demo5" id="blue5" />
       Blue
     </label>
-    <label for="yellow1">
-      <input type="radio" name="demo1" id="yellow1" />
+    <label for="yellow5">
+      <input type="radio" name="demo5" id="yellow5" />
       Yellow
     </label>
     <div class="highlight"></div>
@@ -69,7 +69,7 @@
 
   .highlight {
     position: absolute;
-    position-anchor: --demo1-anchor;
+    position-anchor: --demo5-anchor;
     left: anchor(left);
     top: anchor(top);
     width: anchor-size(width);
@@ -81,7 +81,7 @@
   }
 
   label:has(input:checked) {
-    anchor-name: --demo1-anchor;
+    anchor-name: --demo5-anchor;
   }
 
   label:nth-of-type(1):has(input:checked) {
@@ -96,7 +96,7 @@
     background-color: var(--yellow);
   }
 
-  @supports (position-anchor: --demo1-anchor) {
+  @supports (position-anchor: --demo5-anchor) {
     .radio-container:has(label:nth-of-type(1) > input:checked) {
       --highlight-color: var(--green);
     }

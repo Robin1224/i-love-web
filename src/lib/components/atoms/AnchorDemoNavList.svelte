@@ -12,17 +12,21 @@
 >
   <span>What's your favourite color?</span>
   <div class="radio-container">
-    <label for="green1">
-      <input type="radio" name="demo1" id="green1" checked />
-      Green
+    <label for="spaghetti">
+      <input type="radio" name="food" id="spaghetti" checked />
+      Spaghetti
     </label>
-    <label for="blue1">
-      <input type="radio" name="demo1" id="blue1" />
-      Blue
+    <label for="pizza">
+      <input type="radio" name="food" id="pizza" />
+      Pizza
     </label>
-    <label for="yellow1">
-      <input type="radio" name="demo1" id="yellow1" />
-      Yellow
+    <label for="salad">
+      <input type="radio" name="demo1" id="salad" />
+      Salad
+    </label>
+    <label for="burger">
+      <input type="radio" name="food" id="burger" />
+      Burger
     </label>
     <div class="highlight"></div>
   </div>
@@ -41,13 +45,12 @@
 
   .radio-container {
     display: flex;
-    gap: 1rem;
-    --highlight-color: var(--green);
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   label,
   span {
-    /* font-size: 1rem; */
     color: #ffffff;
     mix-blend-mode: difference;
     width: fit-content;
@@ -64,12 +67,12 @@
   }
 
   input {
-    display: none;
+    
   }
 
   .highlight {
     position: absolute;
-    position-anchor: --demo1-anchor;
+    position-anchor: --demo-food-anchor;
     left: anchor(left);
     top: anchor(top);
     width: anchor-size(width);
@@ -81,7 +84,7 @@
   }
 
   label:has(input:checked) {
-    anchor-name: --demo1-anchor;
+    anchor-name: --demo-food-anchor;
   }
 
   label:nth-of-type(1):has(input:checked) {
@@ -96,7 +99,7 @@
     background-color: var(--yellow);
   }
 
-  @supports (position-anchor: --demo1-anchor) {
+  @supports (position-anchor: --demo-food-anchor) {
     .radio-container:has(label:nth-of-type(1) > input:checked) {
       --highlight-color: var(--green);
     }
