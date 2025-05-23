@@ -11,8 +11,9 @@
   import AnchorDemo4 from "$lib/components/atoms/AnchorDemo4.svelte";
   import AnchorDemo5 from "$lib/components/atoms/AnchorDemo5.svelte";
   import AnchorDemoNav from "$lib/components/atoms/AnchorDemoNav.svelte";
-  import AnchorDemoNavList from "$lib/components/atoms/AnchorDemoNavList.svelte";
-
+  import AnchorDemoList from "$lib/components/atoms/AnchorDemoList.svelte";
+  import AnchorDemoBoard from "$lib/components/atoms/AnchorDemoBoard.svelte";
+  
   let supported = $state(false);
 
   let windowRef;
@@ -41,6 +42,7 @@
   let blockRef21;
   let blockRef22;
   let blockRef23;
+  let blockRef24;
 
   const animationSpeed = 70;
 
@@ -75,6 +77,7 @@
       blockRef21,
       blockRef22,
       blockRef23,
+      blockRef24,
     ];
 
     utils.set(elements, {
@@ -93,6 +96,7 @@
 
   onNavigate((navigation) => {
     let elements = [
+      blockRef24,
       blockRef23,
       blockRef22,
       blockRef21,
@@ -546,7 +550,9 @@ label:nth-of-type(3):has(input:checked) {"{"}
 
 <AnchorDemoNav bind:ref={blockRef22} />
 
-<AnchorDemoNavList bind:ref={blockRef23} />
+<AnchorDemoList bind:ref={blockRef23} />
+
+<AnchorDemoBoard bind:ref={blockRef24} />
 
 <style>
   a,

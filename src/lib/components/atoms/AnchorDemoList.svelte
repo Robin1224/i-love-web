@@ -10,7 +10,7 @@
   bind:this={ref}
   style={`width: min(calc(100% - ${totalPadding}vw), ${maxWidth}); margin: 1rem ${paddingRight}vw 0 ${paddingLeft}vw;`}
 >
-  <span>What's your favourite color?</span>
+  <span>What's your favourite food?</span>
   <div class="radio-container">
     <label for="spaghetti">
       <input type="radio" name="food" id="spaghetti" checked />
@@ -21,7 +21,7 @@
       Pizza
     </label>
     <label for="salad">
-      <input type="radio" name="demo1" id="salad" />
+      <input type="radio" name="food" id="salad" />
       Salad
     </label>
     <label for="burger">
@@ -30,7 +30,7 @@
     </label>
     <div class="highlight"></div>
   </div>
-  <a href="https://codepen.io/robin1224/pen/zxxgGbx">Codepen link</a>
+  <a href="https://codepen.io/robin1224/pen/vEOBjXz">Codepen link</a>
 </div>
 
 <style>
@@ -58,6 +58,9 @@
     z-index: 2;
     padding: 0.2rem 0.5rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   a {
@@ -67,7 +70,15 @@
   }
 
   input {
-    
+    appearance: none;
+    background-color: transparent;
+		margin: 0;
+		font: inherit;
+		width: 1.15rem;
+		height: 1.15rem;
+		border: 0.15rem solid var(--green);
+		border-radius: 9999px;
+		transform: translateY(-0.08rem);
   }
 
   .highlight {
@@ -75,53 +86,16 @@
     position-anchor: --demo-food-anchor;
     left: anchor(left);
     top: anchor(top);
-    width: anchor-size(width);
-    height: anchor-size(height);
-    background-color: var(--highlight-color);
-    z-index: 1;
-    transition: 0.3s ease-in-out;
-    transform: translateY(-0.2rem);
-  }
-
-  label:has(input:checked) {
-    anchor-name: --demo-food-anchor;
-  }
-
-  label:nth-of-type(1):has(input:checked) {
-    background-color: var(--green);
-  }
-
-  label:nth-of-type(2):has(input:checked) {
-    background-color: var(--blue);
-  }
-
-  label:nth-of-type(3):has(input:checked) {
+    width: calc(anchor-size(width) - 0.2rem);
+    height: calc(anchor-size(height) - 0.2rem);
     background-color: var(--yellow);
+    z-index: 1;
+    transition: 0.1s ease-in-out;
+    transform: translateY(-0.2rem);
+    border-radius: 9999px;
   }
 
-  @supports (position-anchor: --demo-food-anchor) {
-    .radio-container:has(label:nth-of-type(1) > input:checked) {
-      --highlight-color: var(--green);
-    }
-
-    .radio-container:has(label:nth-of-type(2) > input:checked) {
-      --highlight-color: var(--blue);
-    }
-
-    .radio-container:has(label:nth-of-type(3) > input:checked) {
-      --highlight-color: var(--yellow);
-    }
-
-    label:nth-of-type(1):has(input:checked) {
-      background-color: transparent;
-    }
-
-    label:nth-of-type(2):has(input:checked) {
-      background-color: transparent;
-    }
-
-    label:nth-of-type(3):has(input:checked) {
-      background-color: transparent;
-    }
+  input:checked {
+    anchor-name: --demo-food-anchor;
   }
 </style>
