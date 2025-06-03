@@ -33,6 +33,7 @@
   });
 </script>
 
+<!-- Fallback for when Javascript is disabled, and for people who have trouble with the colour constrasts -->
 <div class="fallback">
   <h1>robin van der heijden</h1>
   <h2>creative frontend developer</h2>
