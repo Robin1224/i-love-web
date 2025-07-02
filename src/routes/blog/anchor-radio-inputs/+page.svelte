@@ -3,7 +3,6 @@
   import { onNavigate } from "$app/navigation";
   import { utils, stagger } from "animejs";
 
-  import DraggableBox from "$lib/components/atoms/DraggableBox.svelte";
   import Paragraph from "$lib/components/atoms/Paragraph.svelte";
   import AnchorDemo1 from "$lib/components/atoms/AnchorDemo1.svelte";
   import AnchorDemo2 from "$lib/components/atoms/AnchorDemo2.svelte";
@@ -45,8 +44,6 @@
   let blockRef24;
 
   const animationSpeed = 70;
-
-  $inspect(supported);
 
   onMount(() => {
     supported = windowRef.CSS.supports("position-anchor: --my-anchor");
